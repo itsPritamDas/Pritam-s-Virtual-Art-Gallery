@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Art Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-theme">
+  <header>
+    <div class="logo">
+      🎨 <span>Pritam's Virtual Art Gallery</span>
+      <p>Immerse yourself in digital artistry</p>
+    </div>
+    <div class="header-controls">
+      <div class="header-text">Welcome to the World of <strong>Digital Art Gallery</strong></div>
+      <button id="themeToggle">🌙</button>
+      <button id="musicToggle">🔊</button>
+      <audio id="bgMusic" loop autoplay>
+        <source src="Flute Music.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+  </header>
+
+  <section class="category-tabs">
+    <button class="tab active" data-category="pritam">Pritam's Own Arts<br><span>My Original Works</span></button>
+    <button class="tab" data-category="modern">Modern Art<br><span>Contemporary masterpieces</span></button>
+    <button class="tab" data-category="classical">Classical<br><span>Timeless classics</span></button>
+    <button class="tab" data-category="photography">Photography<br><span>Captured moments</span></button>
+    <button class="tab" data-category="abstract">Abstract<br><span>Beyond reality</span></button>
+  </section>
+
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="🔍 Search artworks or artists..." />
+    <button id="filterBtn">🎛️ All Categories</button>
+  </section>
+
+  <main>
+    <h2 id="collection-title">Pritam's Own Arts</h2>
+    <p id="art-count">Loading artworks...</p>
+    <div class="gallery" id="artworkContainer"></div>
+  </main>
+  
+  <div class="modal" id="artModal">
+    <div class="modal-content fade-in">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img id="modalImg" src="" alt="" />
+      <div class="modal-info">
+        <h3 id="modalTitle"></h3>
+        <p id="modalArtist"></p>
+        <p id="modalYear"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
